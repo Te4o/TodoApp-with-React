@@ -41,7 +41,7 @@ class TodoList extends Component {
 
   render() {
     var todos = this.state.todos.map(todo => {
-      return <Todo />
+      return <Todo name={todo.name}/>
 
     });
 
@@ -73,7 +73,7 @@ class Todo extends Component {
       <div>
       <form>
         <input type="checkbox"/>
-        <input type="text" value={this.state.name}/>
+        <input type="text" value={this.props.name}/>
       </form>
       </div>
     )
